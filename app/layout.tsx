@@ -25,12 +25,13 @@ export default function RootLayout({
             style={{
               backgroundImage: "url('/bg.jpg')",
               backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundAttachment: "fixed"
+              backgroundPosition: "center top", // عکس از بالا شروع بشه
+              backgroundRepeat: "no-repeat",
+              backgroundColor: "#050505" // رنگ پس‌زمینه برای ادامه صفحه
             }}
           >
-            {/* لایه مشکی برای خوانایی متن‌ها (کمی شفاف‌تر تا عکس بهتر دیده بشه) */}
-            <div className="absolute inset-0 bg-black/60 z-0"></div>
+            {/* لایه مشکی برای خوانایی متن‌ها */}
+            <div className="absolute inset-0 bg-black/75 z-0"></div>
             
             <div className="relative z-10 flex-1 pb-28">
               {children}
