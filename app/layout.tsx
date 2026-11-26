@@ -29,10 +29,13 @@ export default function RootLayout({
               backgroundAttachment: "fixed"
             }}
           >
-            <div className="absolute inset-0 bg-black/80 z-0"></div>
-            <div className="relative z-10 flex-1 pb-24">
+            {/* لایه مشکی برای خوانایی متن‌ها (کمی شفاف‌تر تا عکس بهتر دیده بشه) */}
+            <div className="absolute inset-0 bg-black/60 z-0"></div>
+            
+            <div className="relative z-10 flex-1 pb-28">
               {children}
             </div>
+            
             <BottomNav />
           </div>
         </TonProvider>
